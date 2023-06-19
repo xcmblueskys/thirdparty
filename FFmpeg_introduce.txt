@@ -1,0 +1,16 @@
+FFmpeg是一套可以用来进行音视频处理的工具和编解码库。
+
+1.FFmpeg工具
+ffmpeg：可用于格式转换、视频剪辑、增加滤镜等处理。
+ffplay：是一个简单的播放器，使用ffmpeg 库解析和解码。 //没有编译出该执行文件
+ffprobe：用于分析视频文件信息，尤其是元数据信息。
+
+2.FFmpeg库
+libavformat - 用于各种音视频格式的封装和解封装（如mp4、flv等格式），各种流媒体协议（RTSP、RTMP、TCP、UDP、HTTP），这个不怎么耗CPU。
+libavcodec - 音视频各种格式的编解码（如H264、H265），可很好的支持某些GPU，这个步骤很耗CPU，最好有已存在于FFmpeg支持列表的GPU。
+libavutil - 公共的工具函数库，包括算数运算，字符操作等。
+libswscale - 提供原始视频的比例缩放、色彩映射转换、图像颜色空间或格式转换的功能。
+libswresample - 提供音频重采样，采样格式转换和混合等功能。
+libavfilter - 各种音视频滤波器，如加水印。
+libavdevice - 用于硬件的音视频采集、加速和显示。
+#libpostproc - 用于后期效果处理，如图像的去块效应等。 暂时没有该库
